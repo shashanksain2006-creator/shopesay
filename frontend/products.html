@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shop | Shop Easy</title><link rel="stylesheet" href="css/style.css"></head>
+<body><nav id="nav"></nav>
+<main>
+<h1>Shop</h1>
+<form class="toolbar" id="filters"><input id="q" placeholder="Search products..." maxlength="50"><select id="category"><option value="">All categories</option></select><button type="submit">Search</button></form>
+<div id="msg" class="msg"></div>
+<div id="grid" class="grid"><div class="loading">Loading...</div></div>
+<div class="pager"><button class="secondary small" id="prev">&larr; Previous</button><span id="pageInfo"></span><button class="secondary small" id="next">Next &rarr;</button></div>
+</main>
+<script src="js/config.js"></script><script src="js/api.js"></script><script src="js/products.js"></script>
+</body></html>

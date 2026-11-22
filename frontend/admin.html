@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin | Shop Easy</title><link rel="stylesheet" href="css/style.css"></head>
+<body><nav id="nav"></nav>
+<main>
+<h1>Admin panel</h1>
+<div id="stats" class="stats"></div>
+<div class="tabs"><button data-tab="products" class="on">Products</button><button data-tab="orders">Orders</button><button data-tab="messages">Messages</button></div>
+
+<section id="tab-products">
+<div class="card"><h2 id="formTitle">Add product</h2>
+<form id="pform" novalidate>
+<div class="two"><div><label for="pname">Name</label><input id="pname" maxlength="120"></div><div><label for="pcategory">Category</label><input id="pcategory" maxlength="40" placeholder="e.g. Electronics"></div>
+<div><label for="pprice">Price</label><input id="pprice" type="number" min="0" step="0.01"></div><div><label for="pstock">Stock</label><input id="pstock" type="number" min="0" step="1"></div></div>
+<label for="pimage">Image URL (optional)</label><input id="pimage" placeholder="https://...">
+<label for="pdesc">Description</label><textarea id="pdesc" maxlength="2000"></textarea>
+<div id="pmsg" class="msg"></div>
+<button type="submit" id="pbtn">Save product</button>
+<button type="button" class="secondary" id="pcancel" style="display:none;width:100%;margin-top:8px">Cancel editing</button></form></div>
+<div class="card"><h2>All products</h2><div id="plist"><div class="loading">Loading...</div></div></div>
+</section>
+
+<section id="tab-orders" style="display:none"><div class="card"><h2>Orders</h2><div id="msg" class="msg"></div><div id="olist"><div class="loading">Loading...</div></div></div></section>
+<section id="tab-messages" style="display:none"><div class="card"><h2>Contact messages</h2><div id="mlist"><div class="loading">Loading...</div></div></div></section>
+</main>
+<script src="js/config.js"></script><script src="js/api.js"></script><script src="js/admin.js"></script>
+</body></html>
